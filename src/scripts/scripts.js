@@ -9,4 +9,4 @@ document.querySelector('.btn').addEventListener('click', function(event) {
     const targetId = event.target.getAttribute('href'); // Pega o ID do elemento de destino
     const targetElement = document.querySelector(targetId); // Seleciona o elemento de destino
     targetElement.scrollIntoView({ behavior: 'smooth' }); // Rola suavemente para o elemento de destino
-});
+});å
