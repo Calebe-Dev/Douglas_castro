@@ -4,7 +4,10 @@
     --secondary-color: #FFFFFF; /* Branco */
     --text-color: #333; /* Cinza escuro para o texto */
     --background-color: #f4f4f4; /* Cinza claro para o fundo */
-    --button-color: #0056b3; /* Azul para o botão */
+    --dark-background-color: #A9A9A9; /* Cinza escuro para o fundo */
+    --button-color: #8FBC8F; /* Azul para o botão */
+    --button-color1: #3CB371;
+    --text-shadow-color: #1C1C1C; /* Cor da sombra do texto */
   }
   
   body {
@@ -33,7 +36,7 @@
   h2 {
     margin-top: 0;
     color: var(--secondary-color); /* Branco para os títulos */
-    text-shadow: 2px 2px 4px #000; /* Adicione um efeito de sombra ao texto */
+    text-shadow: 2px 2px 4px var(--text-shadow-color); /* Sombra do texto mais suave */
   }
   
   .hero-image {
@@ -60,7 +63,7 @@
     color: var(--secondary-color); /* Branco para o texto */
     padding: 15px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     text-decoration: none;
     display: inline-block;
     margin-top: 20px;
@@ -82,8 +85,13 @@
     }
   }
   
-  .btn:hover {
+
+  .btn {
     background-color: var(--button-color); /* Azul para o botão */
+  }
+
+  .btn:hover {
+    background-color: var(--button-color1); /* Azul para o botão */
   }
   
   #sobre {
@@ -92,7 +100,7 @@
   
   #beneficios {
     padding: 40px 0;
-    background-color: var(--secondary-color); /* Branco para o fundo */
+    background-color: var(--dark-background-color); /* Cinza escuro para o fundo */
   }
   
   .benefits-image {
@@ -118,6 +126,7 @@
   
   #depoimentos {
     padding: 40px 0;
+    background-color: var(--dark-background-color); /* Cinza escuro para o fundo */
   }
   
   .depoimento {
@@ -156,7 +165,7 @@
   
   #contato {
     padding: 40px 0;
-    background-color: var(--secondary-color); /* Branco para o fundo */
+    background-color: var(--dark-background-color); /* Cinza escuro para o fundo */
     text-align: center;
     animation: fadeUp 1s ease-in-out; /* Adicione uma animação de fade-up */
   }
