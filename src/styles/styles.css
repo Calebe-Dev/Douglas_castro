@@ -17,7 +17,7 @@
   }
   
   .container {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 20px;
   }
@@ -85,11 +85,10 @@
     }
   }
   
-
   .btn {
     background-color: var(--button-color); /* Azul para o botão */
   }
-
+  
   .btn:hover {
     background-color: var(--button-color1); /* Azul para o botão */
   }
@@ -262,4 +261,123 @@
   
   footer a:hover {
     text-decoration: underline;
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h1,
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .hero-image {
+      max-width: 90%;
+    }
+  
+    .btn {
+      font-size: 16px;
+    }
+  
+    .depoimento {
+      margin-bottom: 10px;
+    }
+  
+    .depoimento img {
+      max-width: 80px;
+    }
+  
+    .social-links li {
+      margin: 0 5px;
+    }
+  
+    .social-links a {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1,
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    .hero-image {
+      max-width: 80%;
+    }
+  
+    .benefits-image {
+      max-width: 80%;
+    }
+  
+    .depoimento img {
+      max-width: 60px;
+    }
+  }
+  
+  /* Estilos para telas maiores */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 70%;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .hero-image {
+      max-width: 60%;
+      margin: 30px auto;
+    }
+  
+    .btn {
+      font-size: 1.2rem;
+      padding: 15px 40px;
+    }
+  
+    .benefits-image {
+      max-width: 50%;
+      margin: 30px auto;
+    }
+  
+    .depoimento {
+      margin-bottom: 30px;
+    }
+  
+    .depoimento p {
+      font-size: 1.1rem;
+    }
+  
+    .depoimento img {
+      max-width: 120px;
+    }
+  
+    .social-links li {
+      margin: 0 20px;
+    }
+  
+    .social-links a {
+      font-size: 28px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 60%;
+    }
+  
+    .hero-image {
+      max-width: 50%;
+    }
+  
+    .benefits-image {
+      max-width: 40%;
+    }
   }
