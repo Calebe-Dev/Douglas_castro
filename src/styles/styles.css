@@ -8,6 +8,8 @@
     --button-color: #8FBC8F; /* Azul para o botão */
     --button-color1: #3CB371;
     --text-shadow-color: #1C1C1C; /* Cor da sombra do texto */
+    --service-section-bg: #f0f0f0; /* Cor de fundo das seções de serviço */
+    --service-section-border-color: #ddd; /* Cor da borda das seções de serviço */
   }
   
   body {
@@ -95,6 +97,16 @@
   
   #sobre {
     padding: 40px 0;
+  }
+  
+  /* Seções de serviço */
+  #avaliacao-fisica, 
+  #consultoria-online, 
+  #treinamento-presencial {
+    padding: 40px 0;
+    background-color: var(--service-section-bg); /* Cor de fundo das seções de serviço */
+    border-top: 1px solid var(--service-section-border-color); /* Borda superior */
+    border-bottom: 1px solid var(--service-section-border-color); /* Borda inferior */
   }
   
   #beneficios {
@@ -380,4 +392,14 @@
     .benefits-image {
       max-width: 40%;
     }
+  }
+  
+  /* Estilos para as seções de serviço */
+  #avaliacao-fisica,
+  #consultoria-online,
+  #treinamento-presencial {
+    padding: 40px 0;
+    background-color: var(--service-section-bg); /* Cor de fundo das seções de serviço */
+    border-top: 1px solid var(--service-section-border-color); /* Borda superior */
+    border-bottom: 1px solid var(--service-section-border-color); /* Borda inferior */
   }
