@@ -1,405 +1,482 @@
 /* Variáveis de cores */
 :root {
-    --primary-color: #e58139; /* Laranja da logo */
-    --secondary-color: #FFFFFF; /* Branco */
-    --text-color: #333; /* Cinza escuro para o texto */
-    --background-color: #f4f4f4; /* Cinza claro para o fundo */
-    --dark-background-color: #A9A9A9; /* Cinza escuro para o fundo */
-    --button-color: #8FBC8F; /* Azul para o botão */
-    --button-color1: #3CB371;
-    --text-shadow-color: #1C1C1C; /* Cor da sombra do texto */
-    --service-section-bg: #f0f0f0; /* Cor de fundo das seções de serviço */
-    --service-section-border-color: #ddd; /* Cor da borda das seções de serviço */
+  --primary-color: #e58139; /* Laranja da logo */
+  --secondary-color: #FFFFFF; /* Branco */
+  --text-color: #333; /* Cinza escuro para o texto */
+  --background-color: #f4f4f4; /* Cinza claro para o fundo */
+  --dark-background-color: #A9A9A9; /* Cinza escuro para o fundo */
+  --button-color: #8FBC8F; /* Azul para o botão */
+  --button-color1: #3CB371;
+  --text-shadow-color: #1C1C1C; /* Cor da sombra do texto */
+  --service-section-bg: #f0f0f0; /* Cor de fundo das seções de serviço */
+  --service-section-border-color: #ddd; /* Cor da borda das seções de serviço */
+  --carousel-width: 800px; /* Largura do carrossel */
+  --carousel-item-width: 200px; /* Largura de cada item do carrossel */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--primary-color); /* Cor da logo */
+  color: var(--secondary-color); /* Branco para o texto */
+  padding: 20px 0;
+  text-align: center;
+  background-image: url('fundo-header.jpg'); /* Adicione uma imagem de fundo para o header */
+  background-size: cover;
+  background-position: center;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  color: var(--secondary-color); /* Branco para os títulos */
+  text-shadow: 2px 2px 4px var(--text-shadow-color); /* Sombra do texto mais suave */
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px; /* Adicione cantos arredondados à imagem */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra à imagem */
+  animation: fadeIn 1s ease-in-out; /* Adicione uma animação de fade-in */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: var(--background-color);
+  to {
+    opacity: 1;
   }
-  
+}
+
+.btn {
+  background-color: var(--primary-color); /* Cor da logo */
+  color: var(--secondary-color); /* Branco para o texto */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Adicione uma sombra ao botão */
+  animation: bounce 1s infinite; /* Adicione uma animação de bounce */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  background-color: var(--button-color); /* Azul para o botão */
+}
+
+.btn:hover {
+  background-color: var(--button-color1); /* Azul para o botão */
+}
+
+#sobre {
+  padding: 40px 0;
+}
+
+/* Seções de serviço */
+#avaliacao-fisica,
+#consultoria-online,
+#treinamento-presencial {
+  padding: 40px 0;
+  background-color: var(--service-section-bg); /* Cor de fundo das seções de serviço */
+  border-top: 1px solid var(--service-section-border-color); /* Borda superior */
+  border-bottom: 1px solid var(--service-section-border-color); /* Borda inferior */
+}
+
+#beneficios {
+  padding: 40px 0;
+  background-color: var(--dark-background-color); /* Cinza escuro para o fundo */
+}
+
+.benefits-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  animation: slideInFromLeft 1s ease-in-out; /* Adicione uma animação de slide-in */
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#depoimentos {
+  padding: 40px 0;
+  background-color: var(--dark-background-color); /* Cinza escuro para o fundo */
+}
+
+.depoimento {
+  background-color: var(--secondary-color); /* Branco para o fundo */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 1s ease-in-out; /* Adicione uma animação de zoom-in */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.depoimento p {
+  margin-bottom: 10px;
+  color: var(--text-color); /* Cinza escuro para o texto */
+}
+
+.depoimento img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#contato {
+  padding: 40px 0;
+  background-color: var(--dark-background-color); /* Cinza escuro para o fundo */
+  text-align: center;
+  animation: fadeUp 1s ease-in-out; /* Adicione uma animação de fade-up */
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#redes-sociais {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin: 0 10px;
+  animation: shake 1s infinite; /* Adicione uma animação de shake */
+}
+
+.social-links a {
+  font-size: 24px;
+  color: var(--text-color); /* Cinza escuro para o texto */
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--primary-color); /* Laranja da logo */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-5px);
+  }
+  20% {
+    transform: translateX(5px);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  60% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  90% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+footer {
+  background-color: var(--primary-color); /* Cor da logo */
+  color: var(--secondary-color); /* Branco para o texto */
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: var(--secondary-color); /* Branco para o texto */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
   .container {
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
   }
-  
-  header {
-    background-color: var(--primary-color); /* Cor da logo */
-    color: var(--secondary-color); /* Branco para o texto */
-    padding: 20px 0;
-    text-align: center;
-    background-image: url('fundo-header.jpg'); /* Adicione uma imagem de fundo para o header */
-    background-size: cover;
-    background-position: center;
-  }
-  
+
   h1,
   h2 {
-    margin-top: 0;
-    color: var(--secondary-color); /* Branco para os títulos */
-    text-shadow: 2px 2px 4px var(--text-shadow-color); /* Sombra do texto mais suave */
+    font-size: 1.5rem;
   }
-  
+
   .hero-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px; /* Adicione cantos arredondados à imagem */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra à imagem */
-    animation: fadeIn 1s ease-in-out; /* Adicione uma animação de fade-in */
+    max-width: 90%;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+
   .btn {
-    background-color: var(--primary-color); /* Cor da logo */
-    color: var(--secondary-color); /* Branco para o texto */
-    padding: 15px 30px;
-    border: none;
-    border-radius: 15px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Adicione uma sombra ao botão */
-    animation: bounce 1s infinite; /* Adicione uma animação de bounce */
+    font-size: 16px;
   }
-  
-  @keyframes bounce {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  .btn {
-    background-color: var(--button-color); /* Azul para o botão */
-  }
-  
-  .btn:hover {
-    background-color: var(--button-color1); /* Azul para o botão */
-  }
-  
-  #sobre {
-    padding: 40px 0;
-  }
-  
-  /* Seções de serviço */
-  #avaliacao-fisica, 
-  #consultoria-online, 
-  #treinamento-presencial {
-    padding: 40px 0;
-    background-color: var(--service-section-bg); /* Cor de fundo das seções de serviço */
-    border-top: 1px solid var(--service-section-border-color); /* Borda superior */
-    border-bottom: 1px solid var(--service-section-border-color); /* Borda inferior */
-  }
-  
-  #beneficios {
-    padding: 40px 0;
-    background-color: var(--dark-background-color); /* Cinza escuro para o fundo */
-  }
-  
-  .benefits-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    animation: slideInFromLeft 1s ease-in-out; /* Adicione uma animação de slide-in */
-  }
-  
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  #depoimentos {
-    padding: 40px 0;
-    background-color: var(--dark-background-color); /* Cinza escuro para o fundo */
-  }
-  
+
   .depoimento {
-    background-color: var(--secondary-color); /* Branco para o fundo */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    animation: zoomIn 1s ease-in-out; /* Adicione uma animação de zoom-in */
-  }
-  
-  @keyframes zoomIn {
-    from {
-      transform: scale(0.9);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  .depoimento p {
     margin-bottom: 10px;
-    color: var(--text-color); /* Cinza escuro para o texto */
   }
-  
+
   .depoimento img {
-    max-width: 100px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 80px;
   }
-  
-  #contato {
-    padding: 40px 0;
-    background-color: var(--dark-background-color); /* Cinza escuro para o fundo */
-    text-align: center;
-    animation: fadeUp 1s ease-in-out; /* Adicione uma animação de fade-up */
-  }
-  
-  @keyframes fadeUp {
-    from {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  #redes-sociais {
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  .social-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
+
   .social-links li {
-    display: inline-block;
-    margin: 0 10px;
-    animation: shake 1s infinite; /* Adicione uma animação de shake */
+    margin: 0 5px;
   }
-  
+
   .social-links a {
-    font-size: 24px;
-    color: var(--text-color); /* Cinza escuro para o texto */
-    text-decoration: none;
+    font-size: 20px;
   }
-  
-  .social-links a:hover {
-    color: var(--primary-color); /* Laranja da logo */
+}
+
+@media (max-width: 480px) {
+  h1,
+  h2 {
+    font-size: 1.2rem;
   }
-  
-  @keyframes shake {
-    0% {
-      transform: translateX(0);
-    }
-    10% {
-      transform: translateX(-5px);
-    }
-    20% {
-      transform: translateX(5px);
-    }
-    30% {
-      transform: translateX(-5px);
-    }
-    40% {
-      transform: translateX(5px);
-    }
-    50% {
-      transform: translateX(-5px);
-    }
-    60% {
-      transform: translateX(5px);
-    }
-    70% {
-      transform: translateX(-5px);
-    }
-    80% {
-      transform: translateX(5px);
-    }
-    90% {
-      transform: translateX(-5px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+
+  .hero-image {
+    max-width: 80%;
   }
-  
-  footer {
-    background-color: var(--primary-color); /* Cor da logo */
-    color: var(--secondary-color); /* Branco para o texto */
-    padding: 20px 0;
-    text-align: center;
+
+  .benefits-image {
+    max-width: 80%;
   }
-  
-  footer p {
-    margin: 5px 0;
+
+  .depoimento img {
+    max-width: 60px;
   }
-  
-  footer a {
-    color: var(--secondary-color); /* Branco para o texto */
-    text-decoration: none;
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 768px) {
+  .container {
+    max-width: 70%;
   }
-  
-  footer a:hover {
-    text-decoration: underline;
+
+  h1 {
+    font-size: 2.5rem;
   }
-  
-  /* Estilos Responsivos */
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    h1,
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    .hero-image {
-      max-width: 90%;
-    }
-  
-    .btn {
-      font-size: 16px;
-    }
-  
-    .depoimento {
-      margin-bottom: 10px;
-    }
-  
-    .depoimento img {
-      max-width: 80px;
-    }
-  
-    .social-links li {
-      margin: 0 5px;
-    }
-  
-    .social-links a {
-      font-size: 20px;
-    }
+
+  h2 {
+    font-size: 2rem;
   }
-  
-  @media (max-width: 480px) {
-    h1,
-    h2 {
-      font-size: 1.2rem;
-    }
-  
-    .hero-image {
-      max-width: 80%;
-    }
-  
-    .benefits-image {
-      max-width: 80%;
-    }
-  
-    .depoimento img {
-      max-width: 60px;
-    }
+
+  .hero-image {
+    max-width: 60%;
+    margin: 30px auto;
   }
-  
-  /* Estilos para telas maiores */
-  @media (min-width: 768px) {
-    .container {
-      max-width: 70%;
-    }
-  
-    h1 {
-      font-size: 2.5rem;
-    }
-  
-    h2 {
-      font-size: 2rem;
-    }
-  
-    .hero-image {
-      max-width: 60%;
-      margin: 30px auto;
-    }
-  
-    .btn {
-      font-size: 1.2rem;
-      padding: 15px 40px;
-    }
-  
-    .benefits-image {
-      max-width: 50%;
-      margin: 30px auto;
-    }
-  
-    .depoimento {
-      margin-bottom: 30px;
-    }
-  
-    .depoimento p {
-      font-size: 1.1rem;
-    }
-  
-    .depoimento img {
-      max-width: 120px;
-    }
-  
-    .social-links li {
-      margin: 0 20px;
-    }
-  
-    .social-links a {
-      font-size: 28px;
-    }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 15px 40px;
   }
-  
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 60%;
-    }
-  
-    .hero-image {
-      max-width: 50%;
-    }
-  
-    .benefits-image {
-      max-width: 40%;
-    }
+
+  .benefits-image {
+    max-width: 50%;
+    margin: 30px auto;
   }
-  
-  /* Estilos para as seções de serviço */
-  #avaliacao-fisica,
-  #consultoria-online,
-  #treinamento-presencial {
-    padding: 40px 0;
-    background-color: var(--service-section-bg); /* Cor de fundo das seções de serviço */
-    border-top: 1px solid var(--service-section-border-color); /* Borda superior */
-    border-bottom: 1px solid var(--service-section-border-color); /* Borda inferior */
+
+  .depoimento {
+    margin-bottom: 30px;
   }
+
+  .depoimento p {
+    font-size: 1.1rem;
+  }
+
+  .depoimento img {
+    max-width: 120px;
+  }
+
+  .social-links li {
+    margin: 0 20px;
+  }
+
+  .social-links a {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 60%;
+  }
+
+  .hero-image {
+    max-width: 50%;
+  }
+
+  .benefits-image {
+    max-width: 40%;
+  }
+}
+
+/* Estilos para as seções de serviço */
+#avaliacao-fisica,
+#consultoria-online,
+#treinamento-presencial {
+  padding: 40px 0;
+  background-color: var(--service-section-bg); /* Cor de fundo das seções de serviço */
+  border-top: 1px solid var(--service-section-border-color); /* Borda superior */
+  border-bottom: 1px solid var(--service-section-border-color); /* Borda inferior */
+}
+
+.foto {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px, 24px, 5px, 10px;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    max-heigh: 300%;
+    margin: 10px;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Adiciona margens automáticas para centralizar a imagem */
+  }
+}
+
+/* Estilos para o carrossel de imagens */
+.owl-carousel {
+  display: block;
+  margin: 20px auto;
+}
+
+.owl-carousel .owl-item {
+  width: var(--carousel-item-width); /* Define a largura de cada item do carrossel */
+  padding: 10px; /* Adiciona um espaçamento entre os itens */
+}
+
+.owl-carousel .owl-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Estilos para os botões de navegação do carrossel */
+.owl-carousel .owl-nav button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: 20px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: 20px;
+}
+
+/* Estilos para os pontos de navegação do carrossel */
+.owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.owl-carousel .owl-dots button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--secondary-color);
+  padding: 5px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.owl-carousel .owl-dots button.active {
+  background-color: var(--primary-color);
+}
